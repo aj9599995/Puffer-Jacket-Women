@@ -15,6 +15,10 @@ export const SWATCH: Record<string, string> = {
   Burgundy: "#6e1d2b",
   Champagne: "#e8d6b5",
   Sage: "#9aa98a",
+  "Copper Rust": "#a8462a",
+  "Burgundy Red": "#8a1c2b",
+  "Olive Green": "#55602f",
+  "Deep Plum": "#4a1638",
 };
 
 export function swatchFor(colour: string): string {

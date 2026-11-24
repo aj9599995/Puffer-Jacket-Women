@@ -432,34 +432,49 @@ const emeraldVestPhotos: Photo[] = [
   { src: "/products/emerald-quilted-puffer-vest/3.webp", alt: "Emerald Quilted Puffer Vest, three-quarter view", width: 1086, height: 1448 },
 ];
 
+// The Copper Rust Quilted Puffer Vest's own photos: front, back and three-quarter.
+const copperVestPhotos: Photo[] = [
+  { src: "/products/copper-rust-quilted-puffer-vest/1.webp", alt: "Copper Rust Quilted Puffer Vest, front view", width: 1199, height: 1190 },
+  { src: "/products/copper-rust-quilted-puffer-vest/2.webp", alt: "Copper Rust Quilted Puffer Vest, back view", width: 1134, height: 1252 },
+  { src: "/products/copper-rust-quilted-puffer-vest/3.webp", alt: "Copper Rust Quilted Puffer Vest, three-quarter view", width: 1199, height: 1202 },
+];
+
+// The Burgundy Red Utility Quilted Puffer Vest's own photos: front, back and three-quarter.
+const burgundyVestPhotos: Photo[] = [
+  { src: "/products/burgundy-red-utility-quilted-vest/1.webp", alt: "Burgundy Red Utility Quilted Puffer Vest, front view", width: 1086, height: 1448 },
+  { src: "/products/burgundy-red-utility-quilted-vest/2.webp", alt: "Burgundy Red Utility Quilted Puffer Vest, back view", width: 1086, height: 1448 },
+  { src: "/products/burgundy-red-utility-quilted-vest/3.webp", alt: "Burgundy Red Utility Quilted Puffer Vest, three-quarter view", width: 1086, height: 1448 },
+];
+
+// The Olive Green Utility Puffer Vest's own photos: front, back and three-quarter.
+const oliveUtilityVestPhotos: Photo[] = [
+  { src: "/products/olive-green-utility-quilted-vest/1.webp", alt: "Olive Green Utility Puffer Vest, front view", width: 1114, height: 1412 },
+  { src: "/products/olive-green-utility-quilted-vest/2.webp", alt: "Olive Green Utility Puffer Vest, back view", width: 1114, height: 1412 },
+  { src: "/products/olive-green-utility-quilted-vest/3.webp", alt: "Olive Green Utility Puffer Vest, three-quarter view", width: 1114, height: 1412 },
+];
+
+// The Deep Plum Quilted Hooded Jacket's own photos: front, back and side.
+const deepPlumPhotos: Photo[] = [
+  { src: "/products/deep-plum-quilted-hooded-jacket/1.webp", alt: "Deep Plum Quilted Hooded Jacket, front view", width: 1102, height: 1266 },
+  { src: "/products/deep-plum-quilted-hooded-jacket/2.webp", alt: "Deep Plum Quilted Hooded Jacket, back view", width: 1122, height: 1309 },
+  { src: "/products/deep-plum-quilted-hooded-jacket/3.webp", alt: "Deep Plum Quilted Hooded Jacket, side view", width: 1122, height: 1267 },
+];
+
 export const products: Product[] = [
-  { slug: "hooded-puffer-jacket", name: "Hooded Puffer Jacket", category: "long-sleeve", colour: "Black", summary: "A hooded long-sleeve puffer for everyday cold weather.", featured: true, placeholder: true, price: null },
-  { slug: "cropped-puffer-jacket", name: "Cropped Puffer Jacket", category: "long-sleeve", colour: "Ivory", summary: "A cropped puffer that sits above the waist.", featured: false, placeholder: true, price: null },
-  { slug: "long-puffer-coat", name: "Long Puffer Coat", category: "long-sleeve", colour: "Ink", summary: "A full-length puffer coat for the coldest days.", featured: false, placeholder: true, price: null },
-  { slug: "belted-puffer-jacket", name: "Belted Puffer Jacket", category: "long-sleeve", colour: "Oxblood", summary: "A puffer with a self-tie belt at the waist.", featured: false, placeholder: true, price: null },
-  { slug: "quilted-puffer-parka", name: "Quilted Puffer Parka", category: "long-sleeve", colour: "Stone", summary: "A quilted parka with a relaxed fit.", featured: false, placeholder: true, price: null },
-  { slug: "packable-puffer-jacket", name: "Packable Puffer Jacket", category: "long-sleeve", colour: "Navy", summary: "A lightweight puffer that folds into its own pocket.", featured: false, placeholder: true, price: null },
-  { slug: "aurora-luxe-puffer-jacket", name: "Aurora Luxe Puffer Jacket", category: "long-sleeve", colour: "Black", summary: "A glossy black puffer with a high funnel collar and silver zips, cut to the waist.", featured: false, placeholder: true, price: null, photos: auroraPhotos },
+  { slug: "aurora-luxe-puffer-jacket", name: "Aurora Luxe Puffer Jacket", category: "long-sleeve", colour: "Black", summary: "A glossy black puffer with a high funnel collar and silver zips, cut to the waist.", featured: true, placeholder: true, price: null, photos: auroraPhotos },
   { slug: "monarch-pearl-puffer-jacket", name: "Monarch Pearl Puffer Jacket", category: "long-sleeve", colour: "Champagne", summary: "A pearl-finish puffer with a high funnel collar and gold zips, cut to the waist.", featured: false, placeholder: true, price: null, photos: monarchPhotos },
-  { slug: "celestine-burgundy-puffer", name: "Celestine Burgundy Puffer", category: "long-sleeve", colour: "Burgundy", summary: "A glossy burgundy puffer with a detachable hood and silver zips, cut to the waist.", featured: false, placeholder: true, price: null, photos: celestinePhotos },
+  { slug: "celestine-burgundy-puffer", name: "Celestine Burgundy Puffer", category: "long-sleeve", colour: "Burgundy", summary: "A glossy burgundy puffer with a detachable hood and silver zips, cut to the waist.", featured: true, placeholder: true, price: null, photos: celestinePhotos },
   { slug: "sage-green-hooded-puffer-jacket", name: "Sage Green Hooded Puffer Jacket", category: "long-sleeve", colour: "Sage", summary: "A quilted sage-green puffer with a hood, drawcord ties and black cuffs, cut to the hip.", featured: false, placeholder: true, price: null, photos: sagePhotos },
-  { slug: "quilted-puffer-vest", name: "Quilted Puffer Vest", category: "sleeveless", colour: "Black", summary: "A classic quilted vest for layering.", featured: true, placeholder: true, price: null },
-  { slug: "hooded-puffer-vest", name: "Hooded Puffer Vest", category: "sleeveless", colour: "Olive", summary: "A hooded puffer vest with a close neck.", featured: false, placeholder: true, price: null },
-  { slug: "cropped-puffer-vest", name: "Cropped Puffer Vest", category: "sleeveless", colour: "Ivory", summary: "A cropped vest that layers over a knit.", featured: false, placeholder: true, price: null },
+  { slug: "deep-plum-quilted-hooded-jacket", name: "Deep Plum Quilted Hooded Jacket", category: "long-sleeve", colour: "Deep Plum", summary: "A diamond-quilted deep plum jacket with a hood on drawcords, waist tabs and flap pockets, cut to the hip.", featured: false, placeholder: true, price: null, photos: deepPlumPhotos },
   { slug: "navy-quilted-puffer-vest", name: "Navy Quilted Puffer Vest", category: "sleeveless", colour: "Navy", summary: "A quilted navy vest with a high collar and zip pockets, cut to the waist.", featured: false, placeholder: true, price: null, photos: navyVestPhotos },
   { slug: "teal-chevron-puffer-vest", name: "Teal Chevron Puffer Vest", category: "sleeveless", colour: "Teal", summary: "A chevron-quilted teal vest with a stand collar and snap front, cut to the waist.", featured: false, placeholder: true, price: null, photos: tealVestPhotos },
-  { slug: "plum-quilted-puffer-vest", name: "Plum Quilted Puffer Vest", category: "sleeveless", colour: "Plum", summary: "A quilted plum vest with a high collar, zip front and zip pockets, cut to the waist.", featured: false, placeholder: true, price: null, photos: plumVestPhotos, variants: [
+  { slug: "plum-quilted-puffer-vest", name: "Plum Quilted Puffer Vest", category: "sleeveless", colour: "Plum", summary: "A quilted plum vest with a high collar, zip front and zip pockets, cut to the waist.", featured: true, placeholder: true, price: null, photos: plumVestPhotos, variants: [
     { colour: "Plum", photos: plumVestPhotos },
     { colour: "Emerald", photos: emeraldVestPhotos },
   ] },
-  { slug: "short-sleeve-puffer-layer", name: "Short Sleeve Puffer Layer", category: "short-sleeve", colour: "Black", summary: "A short-sleeve quilted layer for mild days.", featured: false, placeholder: true, price: null },
-  { slug: "quilted-cropped-tee", name: "Quilted Cropped Tee", category: "short-sleeve", colour: "Stone", summary: "A cropped quilted top with short sleeves.", featured: false, placeholder: true, price: null },
-  { slug: "ribbed-knit-beanie", name: "Ribbed Knit Beanie", category: "caps-hats", colour: "Black", summary: "A ribbed knit beanie that pairs with any puffer.", featured: true, placeholder: true, price: null },
-  { slug: "quilted-baseball-cap", name: "Quilted Baseball Cap", category: "caps-hats", colour: "Navy", summary: "A quilted baseball cap with an adjustable strap.", featured: false, placeholder: true, price: null },
-  { slug: "fleece-bucket-hat", name: "Fleece Bucket Hat", category: "caps-hats", colour: "Oat", summary: "A fleece-lined bucket hat for cold mornings.", featured: false, placeholder: true, price: null },
-  { slug: "quilted-scarf", name: "Quilted Scarf", category: "accessories", colour: "Oxblood", summary: "A quilted scarf that matches the puffer collection.", featured: true, placeholder: true, price: null },
-  { slug: "insulated-gloves", name: "Insulated Gloves", category: "accessories", colour: "Black", summary: "Insulated gloves with touchscreen-friendly fingertips.", featured: false, placeholder: true, price: null },
-  { slug: "padded-tote-bag", name: "Padded Tote Bag", category: "accessories", colour: "Stone", summary: "A padded tote for everyday carry.", featured: false, placeholder: true, price: null },
+  { slug: "copper-rust-quilted-puffer-vest", name: "Copper Rust Quilted Puffer Vest", category: "sleeveless", colour: "Copper Rust", summary: "A diamond-quilted copper-rust vest with a high collar and zip pockets, cut to the waist.", featured: true, placeholder: true, price: null, photos: copperVestPhotos },
+  { slug: "burgundy-red-utility-quilted-vest", name: "Burgundy Red Utility Puffer Vest", category: "sleeveless", colour: "Burgundy Red", summary: "A quilted burgundy-red vest with a high collar, zip front and two flap pockets, cut to the waist.", featured: false, placeholder: true, price: null, photos: burgundyVestPhotos },
+  { slug: "olive-green-utility-quilted-vest", name: "Olive Green Utility Puffer Vest", category: "sleeveless", colour: "Olive Green", summary: "A quilted olive-green utility vest with a high collar on drawcords, corduroy trim and flap pockets, cut to the waist.", featured: false, placeholder: true, price: null, photos: oliveUtilityVestPhotos },
 ];
 
 export const apparelSizes = ["XS", "S", "M", "L", "XL"];
