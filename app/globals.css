@@ -4522,6 +4522,12 @@ html:not([lang="en-US"]) body * {
   outline-offset: 3px;
 }
 
+button.swatch {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
 .buy__sizes .sizes {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));

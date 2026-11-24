@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Info, Ruler, ShieldCheck, Snowflake, Tag, TShirt } from "@phosphor-icons/react/dist/ssr";
 import Split from "@/components/Split";
 import { notFound } from "next/navigation";
 import {
   categoryBySlug,
-  galleryForProduct,
+  colourOptionsFor,
   productBySlug,
   products,
   productsIn,
@@ -13,12 +12,11 @@ import {
 } from "@/lib/catalog";
 import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ProductGallery from "@/components/ProductGallery";
-import AddToBag from "@/components/AddToBag";
+import ProductPurchase from "@/components/ProductPurchase";
 import ProductCard from "@/components/ProductCard";
 import JsonLd from "@/components/JsonLd";
 import { FaqList } from "@/components/FaqList";
-import { Reveal, SettleImage, Stagger, StaggerItem } from "@/components/Motion";
+import { Reveal, Stagger, StaggerItem } from "@/components/Motion";
 
 type Params = Promise<{ slug: string }>;
 
@@ -87,52 +85,15 @@ export default async function ProductPage({ params }: { params: Params }) {
         <Breadcrumbs items={crumbs} />
       </div>
 
-      <section className="container pdp" aria-label={product.name}>
-        <SettleImage className="pdp__gallery">
-          <ProductGallery photos={galleryForProduct(product)} />
-          <ul className="pdp__features" aria-label="At a glance">
-            <li>
-              <TShirt size={28} aria-hidden="true" />
-              <span>{category.name}</span>
-            </li>
-            <li>
-              <Ruler size={28} aria-hidden="true" />
-              <span>{category.sizing === "apparel" ? "XS to XL" : "One size"}</span>
-            </li>
-            <li>
-              <Snowflake size={28} aria-hidden="true" />
-              <span>Fill to confirm</span>
-            </li>
-            <li>
-              <ShieldCheck size={28} aria-hidden="true" />
-              <span>Care on the label</span>
-            </li>
-          </ul>
-        </SettleImage>
-
-        <Reveal className="pdp__info" delay={0.1}>
-          <p className="pdp__badge">Placeholder product</p>
-          <h1 className="pdp__title">{product.name}</h1>
-          <div className="pdp__pricebox">
-            <Tag size={26} aria-hidden="true" />
-            <div>
-              <p className="pdp__price">Price to confirm</p>
-              <p className="pdp__note">
-                <Info size={16} aria-hidden="true" />
-                Price, materials and sizing are confirmed before launch.
-              </p>
-            </div>
-          </div>
-          <p className="pdp__summary">{product.summary}</p>
-
-          <AddToBag
-            slug={product.slug}
-            name={product.name}
-            colour={product.colour}
-            sizes={sizesFor(product.category)}
-          />
-        </Reveal>
-      </section>
+      <ProductPurchase
+        slug={product.slug}
+        name={product.name}
+        summary={product.summary}
+        categoryName={category.name}
+        sizing={category.sizing}
+        sizes={sizesFor(product.category)}
+        options={colourOptionsFor(product)}
+      />
 
       <section className="section section--tint" aria-labelledby="details-heading">
         <div className="container pdp-details">

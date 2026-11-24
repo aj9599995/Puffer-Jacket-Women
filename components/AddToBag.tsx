@@ -21,10 +21,12 @@ type Props = {
   slug: string;
   name: string;
   colour: string;
+  colours?: string[];
+  onColour?: (colour: string) => void;
   sizes: string[];
 };
 
-export default function AddToBag({ slug, name, colour, sizes }: Props) {
+export default function AddToBag({ slug, name, colour, colours, onColour, sizes }: Props) {
   const { add } = useCart();
   const [size, setSize] = useState<string | null>(sizes.length === 1 ? sizes[0] : null);
   const [qty, setQty] = useState(1);
@@ -58,13 +60,20 @@ export default function AddToBag({ slug, name, colour, sizes }: Props) {
           Colour <span>{colour}</span>
         </p>
         <div className="swatches" role="radiogroup" aria-label="Colour">
-          <span
-            role="radio"
-            aria-checked="true"
-            aria-label={colour}
-            className="swatch is-on"
-            style={{ ["--sw" as string]: swatchFor(colour) }}
-          />
+          {(colours ?? [colour]).map((option) => (
+            <button
+              key={option}
+              type="button"
+              role="radio"
+              aria-checked={option === colour}
+              aria-label={option}
+              title={option}
+              className={`swatch${option === colour ? " is-on" : ""}`}
+              style={{ ["--sw" as string]: swatchFor(option) }}
+              onClick={() => onColour?.(option)}
+              disabled={!onColour}
+            />
+          ))}
         </div>
       </div>
 
